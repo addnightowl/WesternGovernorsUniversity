@@ -6,6 +6,6 @@
 
 ## [Chef & Vagrant](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/chef-and-vagrant/README.md)
 
-## [Desktop Virtualization](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/desktop-virtualization/README.md) 
+## [Desktop Virtualization](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/desktop-virtualization/README.md)
 
 ## [Data Center Virtualization](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/data-center-virtualization/README.md)
