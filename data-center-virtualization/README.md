@@ -1,6 +1,5 @@
 # D087 - Data Center Virtualization
 
-<!-- 
 A. SYSTEMS ANALYSIS OF CURRENT ENVIRONMENT
 
 Augusta Crissy Detective Games’ expected server resource requirements will rise in the future as demand for their new virtual reality escape room game soars. To keep up with the increased traffic, more servers will have to be set up and brought online. It will be costly to install more physical servers in the future due to data center capacity constraints. The project manager has requested that a design plan and a prototype be developed for the data center virtualization project, as the company requires assurances that a solution can be created and operated in accordance with the expected benefits, anticipated growth, and resource requirements.

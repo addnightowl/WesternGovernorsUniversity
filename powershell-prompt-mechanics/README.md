@@ -1,6 +1,6 @@
 ### C916 Scripting and Automation – Task 1
 
-<!-- 
+## Requirements
 <#
 
 .SYNOPSIS
@@ -61,5 +61,4 @@ Creation Date: 13 August 2021
 
 Purpose: Initial Script Development
 
-#> 
--->
+#>

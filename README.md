@@ -1,6 +1,7 @@
 # Western Governors University Projects
 
-## [C916 Scripting and Automation – Task 1]()
-## [C916 Scripting and Automation – Task 2]()
-## [Desktop Virtualization]() 
-## [Data Center Virtualization]()
+## [Powershell Prompt  Mechanics](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/powershell-prompt-mechanics/README.md)
+## [Restore MySQL Server](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/restore-mysql-server/README.md)
+## [Chef & Vagrant](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/chef-and-vagrant/README.md)
+## [Desktop Virtualization](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/desktop-virtualization/README.md) 
+## [Data Center Virtualization](https://github.com/addnightowl/WesternGovernorsUniversity/blob/main/data-center-virtualization/README.md)

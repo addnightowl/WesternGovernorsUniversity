@@ -1,6 +1,6 @@
 ### C916 Scripting and Automation – Task 2
 
-<!-- 
+## Requirements
 <#
 
 .SYNOPSIS
@@ -57,5 +57,4 @@ Note: Ensure you have all of the following files intact within the “Requiremen
 
 .NOTES Version: 1.0 Author: Anthony Dewayne Davis Creation Date: 21 August 2021 Purpose: Initial Script Development
 
-#> 
--->
+#>
