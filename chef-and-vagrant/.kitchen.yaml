@@ -1,0 +1,101 @@
+# Anthony Davis, Student-Id
+---
+# Test Kitchen can handle many instances concurrently, allowing you to test your recipes on a variety of platforms. 
+
+# Due to the fact that we are only interested in CentOS, the platforms section contains just centos-7 (Learn Chef, n.d.).
+
+# driver: is the name of a driver that will be used to build platform instances for the purpose of testing cookbooks. 
+
+# This is the default driver for all platforms and suites, unless the platform or suite specifies a driver to override--
+# --the default driver for that platform or suite; a suite-specific driver overrides a platform-specific driver (Learn Chef, n.d.).
+
+# yaml does not support block comments
+
+driver:
+  name: vagrant 
+  # network: Specifies network modifications for the virtual machine (Learn Chef, n.d.).
+  # We're telling vagrant to construct a second public interface for each VM. 
+  # This will allow communication between VMs and other network devices.
+  network:
+    #- ["public_network"] 
+  # customize memory: RAM: 512 sets the memory for each VM to 512 MB.
+  customize:
+    memory: 512
+# provisioner: Chef is specified by provisioner. We utilize chef zero to simulate a Chef server setup locally.-- 
+# --The node characteristics and Chef server functionalities are now available (Learn Chef, n.d.).
+provisioner:
+  name: chef_zero 
+  product_name: chef 
+  product_version: 14.12.9
+# verifier: defines the application for automated testing. We use inspec (Learn Chef, n.d.).
+verifier:
+  name: inspec
+# platforms: specifies the target OS. Each VM will have just one CentOS 7 installed (Learn Chef, n.d.).
+platforms:
+  - name: centos-7
+# suites: suites defines the virtual environment. You can have many suites. We will initialize one for each VM server (Learn Chef, n.d.).
+  # name: this sets the name for each instance. We will initialize one for each VM server.
+  # vm_hostname: each instance's hostname
+  # run_list: This specifies which recipes to execute and in what sequence.--
+  # --The recipes are in the cookbook's recipes folder (learn chef httpd) from learn.chef.io..
+
+suites:
+  # BaseStationCLUTER: Satellite Terminal Server
+  - name: MilkyWay-Satellite-Terminal-Server
+    driver:
+      vm_hostname: MilkyWay-Satellite-Terminal-Server.satelliteads.com
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # BaseStationCLUTER: Master Time Server
+  - name: Andromeda-Master-Time-Server
+    driver:
+      vm_hostname: Andromeda-Master-Time-Server.satelliteads.com 
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # BaseStationCLUTER: Web Server
+  - name: CanisMajorDwarf-Web-Server
+    driver:
+      vm_hostname: CanisMajorDwarf-Web-Server.satelliteads.com 
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # BaseStationCLUTER: Database (DB) Server
+  - name: Cygnus-DB-Server 
+    driver:
+      vm_hostname: Cygnus-DB-Server.satelliteads.com
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # ScaledCLUSTER: Scaled Satellite Terminal Server
+  - name: MaffeiI-Scaled-Satellite-Terminal-Server
+    driver:
+      vm_hostname: MaffeiI-Scaled-Satellite-Terminal-Server.satelliteads.com
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # ScaledCLUSTER: Scaled Web Server
+  - name: MaffeiII-Scaled-Web-Server
+    driver:
+      vm_hostname: MaffeiII-Scaled-Web-Server.satelliteads.com
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # ScaledCLUSTER: Scaled Time Server
+  - name: MagellanicCloud-Scaled-Time-Server
+    driver:
+      vm_hostname: MagellanicCloud-Scaled-Time-Server.satelliteads.com 
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  # ScaledCLUSTER: Scaled Database (DB) Server
+  - name: Messier87-Scaled-DB-Server
+    driver:
+      vm_hostname: Messier87-Scaled-DB-Server.satelliteads.com
+    run_list:
+      - recipe[learn_chef_httpd::default] 
+    attributes:
+  
+  
+  
